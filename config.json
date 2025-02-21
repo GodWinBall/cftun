@@ -1,10 +1,14 @@
 {
   "server": {
-    "token": "quick",
+    "token": "eyJhIjoiMzg2YTljYzQ3MWU3NDRlNzk0NmY4NTkxMjg0ODUyMDEiLCJ0IjoiMWJlMDQzMzQtOGZmMy00MzljLTk4NDctZTI0ZDI1YTgwYTJiIiwicyI6IlpUQmxORGRqT1dVdE1Ea3dPUzAwWW1VMUxUbGxNVFl0T1dSa09UazFOR0ZsWldNeCJ9",
     "warp": {
-      "auto": true,
-      "proxy4": false,
-      "proxy6": true
+      "endpoint": "162.159.192.1:2408",
+      "ipv4": "172.16.0.2",
+      "ipv6": "2606:4700:110:850d:6b06:85ad:e987:5f82",
+      "private-key": "aAmOHKdkglT3i/MpNJw/CA2SJAj20HZZmuZUI0Co92c=",
+      "public-key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+      "Proxy4": false,
+      "Proxy6": true
     }
   }
 }
