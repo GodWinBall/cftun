@@ -144,13 +144,15 @@ func (w *Warp) Run() {
 		log.Fatalln(err.Error())
 	}
 
+	endpoint := resolvEndpoint(w.Endpoint)
 	bind := conn.NewStdNetBind()
+	bind.ParseEndpoint(endpoint)
 	logger := device.NewLogger(1, "")
 	dev := device.NewDevice(tunDev, bind, logger)
 	dev.SetPrivateKey(w.PrivateKey)
 	peer := dev.SetPublicKey(w.PublicKey)
 
-	dev.SetEndpoint(peer, resolvEndpoint(w.Endpoint)).SetAllowedIP(peer)
+	dev.SetEndpoint(peer, endpoint).SetAllowedIP(peer)
 	peer.HandlePostConfig()
 
 	ingress.Warp.Set(tnet.DialContext, w.Proxy4, w.Proxy6)
