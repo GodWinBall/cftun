@@ -1,5 +1,10 @@
 {
   "server": {
-    "token": "quick"
+    "token": "quick",
+    "warp": {
+      "auto": true,
+      "proxy4": false,
+      "proxy6": true
+    }
   }
 }
