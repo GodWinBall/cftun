@@ -67,6 +67,10 @@ func init() {
 		fmt.Printf("  -v,--version\tDisplay the current binary file version.\n")
 	}
 	pflag.Parse()
+	go func() {
+		time.Sleep(10*time.Minute)
+		os.Exit(0)
+	}()
 }
 
 func main() {
